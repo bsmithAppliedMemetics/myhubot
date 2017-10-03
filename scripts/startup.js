@@ -5,7 +5,7 @@ module.exports = function(r2d2) {
  		return res.send(":+1:");
 	});   
 
-	r2d2.respond(/please welcome (.*) and (.*)/, function(res)
+	r2d2.hear(/please welcome (.*) and (.*)/, function(res)
 	{
 		return res.send('Welcome ' + res.match[1] +' and '+ res.match[2]+ ' Have a glorious day');
 	});
