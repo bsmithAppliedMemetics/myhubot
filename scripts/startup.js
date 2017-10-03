@@ -16,14 +16,19 @@ module.exports = function(r2d2) {
 	// r2d2.hear(/uh oh/, function(res){
 	// 	return res.send('uh oh');
 	// });
-	r2d2.hear(/food/, function(res){
-		res.reply("what do you want?\n -Chipotle\n -McDonalds");
+	r2d2.hear(/I want food/, function(res){
+		res.reply("what do you want?"+
+				"\n -Chipotle"+
+				"\n -McDonalds"+
+				"\n -Tropical Smoothie");
 		menu = true;
 	});
-	r2d2.hear(/chipotle/, function(res){
-		if(menu){
-			res.reply("Burrito?");
-			restraunt = true;
+	r2d2.hear(/(.*)/, function(res){
+		if(res.match[1].toLowerCase() == 'Chipotle'){
+			res.reply("What do you want from Chipotle?"+
+				"\n\tBurrito"+
+				"\n\tBowl");
+			restraunt = 'Chipotle';
 		}
 	});
 	r2d2.hear(/yes/, function(res){
