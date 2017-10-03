@@ -24,7 +24,7 @@ module.exports = function(r2d2) {
 		menu = true;
 	});
 	r2d2.hear(/(.*)/, function(res){
-		if(res.match[1].toLowerCase() == 'Chipotle'){
+		if(res.match[1] == 'Chipotle'){
 			res.reply("What do you want from Chipotle?"+
 				"\n\tBurrito"+
 				"\n\tBowl");
