@@ -1,5 +1,7 @@
 
 module.exports = function(r2d2) {
+	var menu = false;
+	var restraunt = false;
 	var food = false;
 	var restraunts = ['Qdoba Mexican Grill', 'Krispy Kreme',"McDonald's", 'Sonic Drive-In', 'Checkers','Taco Bell',"Dunkin' Donuts",'Taco Cabana','Red Rooster','Bojangles'];
 	r2d2.hear(/alive?/, function(res) {
@@ -16,12 +18,24 @@ module.exports = function(r2d2) {
 	});
 	r2d2.hear(/food/, function(res){
 		res.reply("what do you want?");
-		food = true;
+		menu = true;
 	})
 	r2d2.hear(/chipotle/, function(res){
-		if(food){
+		if(menu){
 			res.reply("Burrito?");
+			restraunt = true;
 		}
+	})
+	r2d2.hear(/yes/, function(res){
+		if (restraunt)
+		{
+			res.reply("Ordered!");
+		}
+	})
+	r2d2.hear(/close/, function{
+		menu = false;
+		restraunt = false;
+		food = false;
 	})
 	// r2d2.respond(/food/, function(res){
 	// 	res.reply("what do you want?");
