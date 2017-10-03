@@ -23,7 +23,8 @@ module.exports = function(r2d2) {
 				"\n -Tropical Smoothie");
 		menu = true;
 	});
-	r2d2.hear(/(.*)/, function(res){
+	r2d2.hear(/(*)/, function(res){
+		res.reply(res.match[1]);
 		if(res.match[1] == 'Chipotle'){
 			res.reply("What do you want from Chipotle?"+
 				"\n\tBurrito"+
