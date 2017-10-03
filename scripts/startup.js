@@ -13,9 +13,9 @@ module.exports = function(r2d2) {
 		return res.send('Welcome ' + res.match[1] +' and '+ res.match[2]+ '. Have a glorious day');
 	});
 
-	r2d2.hear(/uh oh/, function(res){
-		return res.send('uh oh');
-	});
+	// r2d2.hear(/uh oh/, function(res){
+	// 	return res.send('uh oh');
+	// });
 	r2d2.hear(/food/, function(res){
 		res.reply("what do you want?");
 		menu = true;
@@ -32,10 +32,11 @@ module.exports = function(r2d2) {
 			res.reply("Ordered!");
 		}
 	});
-	r2d2.hear(/close/, function{
+	r2d2.hear(/close/, function(res){
 		menu = false;
 		restraunt = false;
 		food = false;
+		res.reply('exited');
 	});
 	// r2d2.respond(/food/, function(res){
 	// 	res.reply("what do you want?");
