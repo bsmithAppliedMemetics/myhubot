@@ -19,24 +19,24 @@ module.exports = function(r2d2) {
 	r2d2.hear(/food/, function(res){
 		res.reply("what do you want?");
 		menu = true;
-	})
+	});
 	r2d2.hear(/chipotle/, function(res){
 		if(menu){
 			res.reply("Burrito?");
 			restraunt = true;
 		}
-	})
+	});
 	r2d2.hear(/yes/, function(res){
 		if (restraunt)
 		{
 			res.reply("Ordered!");
 		}
-	})
+	});
 	r2d2.hear(/close/, function{
 		menu = false;
 		restraunt = false;
 		food = false;
-	})
+	});
 	// r2d2.respond(/food/, function(res){
 	// 	res.reply("what do you want?");
 	// 	r2d2.hear(/chipotle/, function(res){
