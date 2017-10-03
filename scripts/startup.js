@@ -10,6 +10,7 @@ module.exports = function(r2d2) {
 			res.reply("Burrito?");
 			r2d2.hear(/yes/, function(res){
 				r2d2.reply("Ordered!");
+				return;
 			});
 		});
 		return;
