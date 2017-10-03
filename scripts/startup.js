@@ -1,21 +1,26 @@
 
 module.exports = function(r2d2) {
+	var restraunts = ['Qdoba Mexican Grill', 'Krispy Kreme',"McDonald's", 'Sonic Drive-In', 'Checkers','Taco Bell',"Dunkin' Donuts",'Taco Cabana','Red Rooster','Bojangles'];
 	r2d2.hear(/alive?/, function(res) {
  		return res.send(":+1:");
 	});   
 
-
-	r2d2.respond(/food/, function(res){
-		res.reply("what do you want?");
-		r2d2.hear(/chipotle/, function(res){
-			res.reply("Burrito?");
-			r2d2.hear(/yes/, function(res){
-				r2d2.reply("Ordered!");
-				return;
-			});
-			return;
-		});
-		return;
-
+	r2d2.respond(/please welcome (.*) and (.*)/, function(res)
+	{
+		return res.send('Welcome ' + res[0] +' and '+ res[1]+ ' Have a glorious day');
 	});
+
+	// r2d2.respond(/food/, function(res){
+	// 	res.reply("what do you want?");
+	// 	r2d2.hear(/chipotle/, function(res){
+	// 		res.reply("Burrito?");
+	// 		r2d2.hear(/yes/, function(res){
+	// 			r2d2.reply("Ordered!");
+	// 			return;
+	// 		});
+	// 		return;
+	// 	});
+	// 	return;
+
+	// });
  }
