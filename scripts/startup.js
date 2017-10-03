@@ -7,7 +7,7 @@ module.exports = function(r2d2) {
 
 	r2d2.respond(/please welcome (.*) and (.*)/, function(res)
 	{
-		return res.send('Welcome ' + res.match[0] +' and '+ res.match[1]+ ' Have a glorious day');
+		return res.send('Welcome ' + res.match[1] +' and '+ res.match[2]+ ' Have a glorious day');
 	});
 
 	// r2d2.respond(/food/, function(res){
