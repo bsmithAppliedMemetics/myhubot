@@ -17,7 +17,7 @@ module.exports = function(r2d2) {
 	// 	return res.send('uh oh');
 	// });
 	r2d2.hear(/food/, function(res){
-		res.reply("what do you want?");
+		res.reply("what do you want?\n -Chipotle\n -McDonalds");
 		menu = true;
 	});
 	r2d2.hear(/chipotle/, function(res){
