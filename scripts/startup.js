@@ -24,8 +24,7 @@ module.exports = function(r2d2) {
 		menu = true;
 	});
 	r2d2.hear(/Chipotle/, function(res){
-		res.reply(res.match[1]);
-		if(res.match[1] == 'Chipotle'){
+		if(menu){
 			res.reply("What do you want from Chipotle?"+
 				"\n\tBurrito"+
 				"\n\tBowl");
