@@ -24,7 +24,7 @@ module.exports = function(r2d2) {
 		menu = true;
 	});
 	r2d2.hear(/Chipotle/, function(res){
-		if(menu){
+		if(menu	){
 			res.reply("What do you want from Chipotle?"+
 				"\n\tBurrito"+
 				"\n\tBowl");
@@ -38,7 +38,6 @@ module.exports = function(r2d2) {
 	// 	}
 	// });
 	r2d2.hear(/Bowl/, function(res){
-	res.reply(res.match[1]);
 	if(restraunt == 'Chipotle'){
 		return restraunt.reply('Order!');			
 	}
