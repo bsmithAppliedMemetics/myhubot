@@ -39,7 +39,7 @@ module.exports = function(r2d2) {
 	// });
 	r2d2.hear(/Bowl/, function(res){
 	if(restraunt == 'Chipotle'){
-		return restraunt.reply('Order!');			
+		return restraunt.reply('Ordered!');			
 	}
 	});
 	r2d2.hear(/close/, function(res){
