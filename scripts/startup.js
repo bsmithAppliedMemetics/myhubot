@@ -24,11 +24,11 @@ module.exports = function(r2d2) {
 		menu = true;
 	});
 	r2d2.hear(/Chipotle/, function(res){
-		if(menu	){
+		if(menu){
+			restraunt = 'Chipotle';
 			res.reply("What do you want from Chipotle?"+
 				"\n\tBurrito"+
 				"\n\tBowl");
-			restraunt = 'Chipotle';
 		}
 	});
 	// r2d2.hear(/yes/, function(res){
