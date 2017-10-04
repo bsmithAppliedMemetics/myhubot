@@ -23,7 +23,7 @@ module.exports = function(r2d2) {
 				"\n -Tropical Smoothie");
 		menu = true;
 	});
-	r2d2.hear(/(*)/, function(res){
+	r2d2.hear(/Chipotle/, function(res){
 		res.reply(res.match[1]);
 		if(res.match[1] == 'Chipotle'){
 			res.reply("What do you want from Chipotle?"+
@@ -32,11 +32,17 @@ module.exports = function(r2d2) {
 			restraunt = 'Chipotle';
 		}
 	});
-	r2d2.hear(/yes/, function(res){
-		if (restraunt)
-		{
-			res.reply("Ordered!");
-		}
+	// r2d2.hear(/yes/, function(res){
+	// 	if (restraunt)
+	// 	{
+	// 		res.reply("Ordered!");
+	// 	}
+	// });
+	r2d2.hear(/Bowl/, function(res){
+	res.reply(res.match[1]);
+	if(restraunt == 'Chipotle'){
+		return restraunt.reply('Order!');			
+	}
 	});
 	r2d2.hear(/close/, function(res){
 		menu = false;
