@@ -32,15 +32,13 @@ module.exports = function(r2d2) {
 			menu = false;
 		}
 	});
-	// r2d2.hear(/yes/, function(res){
-	// 	if (restraunt)
-	// 	{
-	// 		res.reply("Ordered!");
-	// 	}
-	// });
+
 	r2d2.hear(/Bowl/, function(res){
 	if(restraunt == 'Chipotle'){
-		return res.reply('Ordered!');			
+		return res.reply('Ordered!');
+		menu = false;
+		restraunt = false;
+		food = false;			
 	}
 	});
 	r2d2.hear(/close/, function(res){
