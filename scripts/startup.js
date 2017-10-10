@@ -27,8 +27,9 @@ module.exports = function(r2d2) {
 		if(menu){
 			restraunt = 'Chipotle';
 			res.reply("What do you want from Chipotle?"+
-				"\n\tBurrito"+
-				"\n\tBowl");
+				"\n\t - Burrito"+
+				"\n\t - Bowl");
+			menu = false;
 		}
 	});
 	// r2d2.hear(/yes/, function(res){
