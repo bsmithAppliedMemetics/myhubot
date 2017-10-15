@@ -15,7 +15,7 @@ module.exports = function(r2d2) {
 	// r2d2.hear(/uh oh/, function(res){
 	// 	return res.send('uh oh');
 	// });
-	var places = ['Chipotle', 'McDonalds', 'Tropical Smoothie'];
+	var places = ['Chipotle', 'McDonalds', 'Tropical Smoothie', 'asdf'];
 	r2d2.hear(/I want food/, function(res){
 
 		res.reply("what do you want?");
