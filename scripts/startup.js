@@ -15,7 +15,8 @@ module.exports = function(r2d2) {
 	// r2d2.hear(/uh oh/, function(res){
 	// 	return res.send('uh oh');
 	// });
-	var places = ['Chipotle', 'McDonalds', 'Tropical Smoothie', 'asdf'];
+	var places = ['Chipotle', 'McDonalds', 'Tropical Smoothie', '5 Guys'];
+
 	r2d2.hear(/I want food/, function(res){
 
 		res.reply("what do you want?");
@@ -23,15 +24,6 @@ module.exports = function(r2d2) {
 			res.reply(places[i] + "\n\t")
 		};
 		menu = true;
-	});
-	r2d2.hear(/Tropical Smoothie/, function(res){
-		if(menu){
-			restraunt = 'Tropical Smoothie';
-			res.reply("What do you want from Chipotle?"+
-				"\n\t - Burrito"+
-				"\n\t - Bowl");
-			menu = false;
-		}
 	});
 
 	r2d2.hear(/Chipotle/, function(res){
