@@ -26,7 +26,7 @@ module.exports = function(r2d2) {
 		menu = true;
 	});
 	r2d2.respond("Hello", function(res){
-		res.respond('World');
+		res.reply('World');
 	});
 	r2d2.hear(/places[1]/, function(res){
 		res.reply("Eww Gross");
