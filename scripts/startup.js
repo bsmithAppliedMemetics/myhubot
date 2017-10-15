@@ -26,9 +26,10 @@ module.exports = function(r2d2) {
 		menu = true;
 	});
 
-	r2d2.hear(places[1].ignoreCase, function(res){
+	r2d2.hear(/places[1]/, function(res){
 		res.reply("Eww Gross");
 	});
+
 	r2d2.hear(/Chipotle/, function(res){
 		if(menu){
 			restraunt = 'Chipotle';
