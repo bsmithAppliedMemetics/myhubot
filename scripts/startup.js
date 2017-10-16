@@ -22,7 +22,7 @@ module.exports = function(r2d2) {
 		res.reply("what do you want?");
 		setTimeout(function(){
 			for(var i = 0; i < places.length; i++){
-				res.reply(places[i] + "\n\t")
+				res.reply("\t" + places[i] + "\n")
 			};
 		}, 100);
 
