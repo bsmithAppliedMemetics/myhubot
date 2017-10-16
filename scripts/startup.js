@@ -20,6 +20,7 @@ module.exports = function(r2d2) {
 	r2d2.hear(/I want food/, function(res){
 
 		res.reply("what do you want?");
+		sleep(100);
 		for(var i = 0; i < places.length; i++){
 			res.reply(places[i] + "\n\t")
 		};
