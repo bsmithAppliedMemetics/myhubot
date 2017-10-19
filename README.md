@@ -1,10 +1,10 @@
-#r2d2 
+#r2d2 #
 
-##Description
+## Description ##
 
 r2d2 is a simple robot. He prefers fastfood and can help with remembering if you have class today. He can also welcome people to the room.
 
-##Commands
+## Commands ##
 
 ```
 alive?
@@ -40,7 +40,7 @@ Where $1 and $2 are names.
 When someone types ```Class?```
 The robot should respond with Yes or No. Currently says a day ahead if it is not Wednesday.
 
-##Instalation Instructions
+## Instalation Instructions ##
 
 Installing r2d2 can be found in the Robots Readme folder's README.md.
 
