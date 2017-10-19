@@ -31,7 +31,7 @@ module.exports = function(r2d2) {
 	});
 
 	r2d2.hear(/Class\?/, function(res){
-		var day = undefined
+		var day = undefined;
 		switch (new Date().getDay()) {
 		    case 0:
 		        day = "Sunday";
