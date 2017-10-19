@@ -35,31 +35,31 @@ module.exports = function(r2d2) {
 		d.getDay();
 		res.reply(d);
 		var day = "";
-		switch(d){
-			case 0:
-				day = "Sunday"
-				break;
-			case 1:
-				day = "Monday"
-				break;
-			case 2:
-				day = "Tuesday"
-				break;
-			case 3:
-				day = "Wednesday"
-				break;
-			case 4:
-				day = "Thursday"
-				break;
-			case 5:
-				day = "Friday"
-				break;
-			case 6:
-				day = "Saturday"
-				break;
-			default:
-				break;
-		}
+		// switch(d){
+		// 	case 0:
+		// 		day = "Sunday"
+		// 		break;
+		// 	case 1:
+		// 		day = "Monday"
+		// 		break;
+		// 	case 2:
+		// 		day = "Tuesday"
+		// 		break;
+		// 	case 3:
+		// 		day = "Wednesday"
+		// 		break;
+		// 	case 4:
+		// 		day = "Thursday"
+		// 		break;
+		// 	case 5:
+		// 		day = "Friday"
+		// 		break;
+		// 	case 6:
+		// 		day = "Saturday"
+		// 		break;
+		// 	default:
+		// 		break;
+		// }
 		if(d == 3) {
 			res.reply("Yup, we have class today!");
 		}
