@@ -3,7 +3,8 @@ module.exports = function(r2d2) {
 	var menu = false;
 	var restraunt = false;
 	var food = false;
-	r2d2.hear(/alive?/, function(res) {
+
+	r2d2.hear(/alive\?/, function(res) {
  		return res.send(":+1:");
 	});   
 
@@ -28,9 +29,44 @@ module.exports = function(r2d2) {
 
 		menu = true;
 	});
-	// r2d2.hear("Hello", function(res){
-	// 	res.reply('World');
-	// });
+
+	r2d2.hear(/Class\?/, function(){
+		var d = new Date();
+		d.getDay();
+		var day = "";
+		switch(d){
+			case 0:
+				day = "Sunday"
+				break;
+			case 1:
+				day = "Monday"
+				break;
+			case 2:
+				day = "Tuesday"
+				break;
+			case 3:
+				day = "Wednesday"
+				break;
+			case 4:
+				day = "Thursday"
+				break;
+			case 5:
+				day = "Friday"
+				break;
+			case 6:
+				day = "Saturday"
+				break;
+			default:
+				break;
+		}
+		if(d == 3) {
+			res.reply("Yup, we have class today!");
+		}
+		else {
+			res.reply("No, its " +day);
+		}
+	});
+
 	r2d2.hear(/McDonalds/, function(res){
 		if(menu){
 			res.reply("Eww Gross");	
