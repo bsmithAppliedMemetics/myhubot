@@ -31,7 +31,7 @@ module.exports = function(r2d2) {
 	// r2d2.hear("Hello", function(res){
 	// 	res.reply('World');
 	// });
-	r2d2.hear(/places[1]/g, function(res){
+	r2d2.hear(/McDonalds/g, function(res){
 		res.reply("Eww Gross");
 	});
 
