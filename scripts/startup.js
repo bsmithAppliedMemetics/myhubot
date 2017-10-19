@@ -75,7 +75,7 @@ module.exports = function(r2d2) {
 
 	r2d2.hear(/5 Guys/, function(res){
 		if(menu){
-			res.reply("Yum Smoothies!");	
+			res.reply("Get some fries too!");	
 		}
 	});
 	
@@ -83,8 +83,8 @@ module.exports = function(r2d2) {
 		if(menu){
 			restraunt = 'Chipotle';
 			res.reply("What do you want from Chipotle?"+
-				"\n\t - Burrito"+
-				"\n\t - Bowl");
+				"\n\tBurrito"+
+				"\n\tBowl");
 			menu = false;
 		}
 	});
