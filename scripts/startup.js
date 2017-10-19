@@ -33,6 +33,7 @@ module.exports = function(r2d2) {
 	r2d2.hear(/Class\?/, function(){
 		var d = new Date();
 		d.getDay();
+		res.reply(d);
 		var day = "";
 		switch(d){
 			case 0:
