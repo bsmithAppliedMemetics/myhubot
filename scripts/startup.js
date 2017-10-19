@@ -31,10 +31,24 @@ module.exports = function(r2d2) {
 	// r2d2.hear("Hello", function(res){
 	// 	res.reply('World');
 	// });
-	r2d2.hear(/McDonalds/g, function(res){
-		res.reply("Eww Gross");
+	r2d2.hear(/McDonalds/, function(res){
+		if(menu){
+			res.reply("Eww Gross");	
+		}
+	});
+	
+	r2d2.hear(/Tropical Smoothie/, function(res){
+	if(menu){
+		res.reply("Yum Smoothies!");	
+	}
 	});
 
+	r2d2.hear(/5 Guys/, function(res){
+		if(menu){
+			res.reply("Yum Smoothies!");	
+		}
+	});
+	
 	r2d2.hear(/Chipotle/, function(res){
 		if(menu){
 			restraunt = 'Chipotle';
@@ -46,21 +60,21 @@ module.exports = function(r2d2) {
 	});
 
 	r2d2.hear(/Bowl/, function(res){
-	if(restraunt == 'Chipotle'){
-		menu = false;
-		restraunt = false;
-		food = false;
-		return res.reply('Ordered!');	
-	}
+		if(restraunt == 'Chipotle'){
+			menu = false;
+			restraunt = false;
+			food = false;
+			return res.reply('Ordered!');	
+		}
 	});
 
 	r2d2.hear(/Burrito/, function(res){
-	if(restraunt == 'Chipotle'){
-		menu = false;
-		restraunt = false;
-		food = false;
-		return res.reply('Ordered!');	
-	}
+		if(restraunt == 'Chipotle'){
+			menu = false;
+			restraunt = false;
+			food = false;
+			return res.reply('Ordered!');	
+		}
 	});
 
 	r2d2.hear(/close/, function(res){
