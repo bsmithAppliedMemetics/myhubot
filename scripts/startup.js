@@ -31,41 +31,34 @@ module.exports = function(r2d2) {
 	});
 
 	r2d2.hear(/Class\?/, function(res){
-		var d = new Date();
-		day = d.getDay();
-		res.reply(d);
-		var day = "";
-		switch(d){
-			case 0:
-				day = "Sunday";
-				break;
-			case 1:
-				day = "Monday";
-				break;
-			case 2:
-				day = "Tuesday";
-				break;
-			case 3:
-				day = "Wednesday";
-				break;
-			case 4:
-				day = "Thursday";
-				break;
-			case 5:
-				day = "Friday";
-				break;
-			case 6:
-				day = "Saturday";
-				break;
-			default:
-				break;
+		var day = undefined
+		switch (new Date().getDay()) {
+		    case 0:
+		        day = "Sunday";
+		        break;
+		    case 1:
+		        day = "Monday";
+		        break;
+		    case 2:
+		        day = "Tuesday";
+		        break;
+		    case 3:
+		        res.reply("Yup, we have class today!");
+		        break;
+		    case 4:
+		        day = "Thursday";
+		        break;
+		    case 5:
+		        day = "Friday";
+		        break;
+		    case 6:
+		        day = "Saturday";
 		}
-		if(d == 3) {
-			res.reply("Yup, we have class today!");
-		}
-		else {
+
+		if(day){
 			res.reply("No, its " +day);
 		}
+		
 	});
 
 	r2d2.hear(/McDonalds/, function(res){
