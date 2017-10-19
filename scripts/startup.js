@@ -32,9 +32,7 @@ module.exports = function(r2d2) {
 
 	r2d2.hear(/Class\?/, function(res){
 		var d = new Date();
-		d.getDay();
-		res.reply(d);
-		var day = "";
+		day = d.getDay();
 		switch(d){
 			case 0:
 				day = "Sunday"
